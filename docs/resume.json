@@ -1,0 +1,241 @@
+{
+  "basics": {
+    "name": "Vasiliy Polyakov",
+    "label": "Senior Software Engineer",
+    "email": "job@vpolyakov.cv",
+    "phone": "",
+    "url": "https://vpolyakov.cv",
+    "summary": "Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development. Development automation specialist with a vast CI/CD and DevOps expertise. Collaborated with distributed teams in different software development stages. Constantly improving skills with new technologies and instruments. Passionate about efficiency and performance. GNU/Linux and FOSS enthusiast.",
+    "location": {
+      "postalCode": "",
+      "countryCode": "",
+      "region": "",
+      "city": "",
+      "address": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "invasy",
+        "url": "https://www.linkedin.com/in/invasy/"
+      },
+      {
+        "network": "GitHub",
+        "username": "invasy",
+        "url": "https://github.com/invasy"
+      },
+      {
+        "network": "LeetCode",
+        "username": "invasy",
+        "url": "https://leetcode.com/invasy/"
+      }
+    ],
+    "image": ""
+  },
+  "work": [
+    {
+      "name": "NGENIX",
+      "location": "Moscow, Russia (remote)",
+      "url": "https://ngenix.net/",
+      "position": "Senior Software Engineer",
+      "startDate": "2023-06-19",
+      "endDate": "",
+      "description": "",
+      "summary": "**Tech stack**: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes.",
+      "highlights": []
+    },
+    {
+      "name": "M.Video-Eldorardo",
+      "url": "https://www.mvideoeldorado.ru/",
+      "location": "Moscow, Russia (remote)",
+      "position": "Lead Software Engineer",
+      "startDate": "2021-12-01",
+      "endDate": "2022-09-30",
+      "description": "_M.Video-Eldorado Group_ is Russia's leading e-commerce and consumer electronics retailer with gross merchandise value over $10 billion. M.Video-Eldorado Group is also one of the largest and most technologically advanced retailers with distributed services all across Russia.",
+      "summary": "**Tech stack**: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLab CI, Kubernetes, microservices.",
+      "highlights": [
+        "Analyzed requirements and implemented architecture for new microservices.",
+        "Collaborated with agile team, managed to enhance service robustness.",
+        "Facilitated internal developers meetings to share ideas and knowledge."
+      ]
+    },
+    {
+      "name": "Rostelecom IT",
+      "url": "https://www.rt.ru/",
+      "location": "Perm, Russia",
+      "position": "Senior Software Engineer",
+      "startDate": "2019-01-09",
+      "endDate": "2021-12-31",
+      "description": "_PJSC \"Rostelecom\" is Russia's largest integrated provider of digital services and solutions. Rostelecom is an unquestionable technical leader on the market of innovative telecommunications services for electronic government, cybersecurity, data center and cloud-based services, biometrics, healthcare, education, house maintenance and utility services.",
+      "summary": "**Tech stack**: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat, OpenShift, JMeter, Gatling.",
+      "highlights": [
+        "Developed high performance event-driven payment service with C++, Qt, CEF, OpenShift.",
+        "Boosted service performance by redesigning event queues.",
+        "Organized and implemented CI/CD pipelines to decrease deployment time from days to minutes.",
+        "Initiated migration to blue-green deployment with extensive load testing.",
+        "Planned tasks and facilitated meetings with distributed agile team.",
+        "Redesigned documentation and knowledge base structure, saved hours of searching for answers."
+      ]
+    },
+    {
+      "name": "Perm State University",
+      "url": "https://www.psu.ru/",
+      "location": "Perm, Russia",
+      "position": "Research Engineer",
+      "startDate": "2018-05-10",
+      "endDate": "2018-12-31",
+      "description": "_SC \"UEC-Aviadvigatel\"_ is a design bureau which develops gas turbine engines for aviation and aeroderivative IGTs and gensets. Member of United Engine Corporation (UEC).",
+      "summary": "**Tech stack**: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL, Ganglia.",
+      "highlights": [
+        "Participated in research and development project for _UEC-Aviadvigatel_ funded by Russian Foundation for Basic Research.",
+        "Project result is a turbine engine computational aerodynamics model based on a proprietary numerical solver of Navier-Stokes equations."
+      ]
+    },
+    {
+      "name": "Stream (MTS)",
+      "url": "https://mts.ru/",
+      "location": "Perm, Russia",
+      "position": "Software Engineer",
+      "startDate": "2017-12-01",
+      "endDate": "2018-05-04",
+      "description": "_MTS_ is a Russia's digital ecosystem and largest mobile operator that provides a wide range of digital-first services to help enrich the modern 21st-century lifestyle. The company offers a full range of solutions for consumers and business customers across wireless and wireline connectivity; over-the-top, linear, and satellite television; digital-first banking and financial services; as well as unified communications, cloud computing and IoT.",
+      "summary": "**Tech stack**: C++, STL, Boost, CMake.",
+      "highlights": [
+        "Developed in-house high performance service using C++, STL, Boost, Qt that allowed clients to commit payment transactions and view fiscal data.",
+        "Optimized event matching algorithms to decrease server load by 21% on average."
+      ]
+    },
+    {
+      "name": "Perm State University",
+      "url": "https://www.psu.ru/",
+      "location": "Perm, Russia",
+      "position": "Chief of Laboratory and Research Engineer",
+      "startDate": "2012-10-01",
+      "endDate": "2017-12-01",
+      "description": "",
+      "summary": "**Tech stack**: C++, Fortran90, OpenMP, OpenMPI CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL.",
+      "highlights": [
+        "Researched and developed HPC applications (fluid mechanics, aerodynamics, linguistics).",
+        "Tasks, projects, and people management.",
+        "HPC clusters administration and maintenance.",
+        "Popularization of science, public lectures, science events and festivals."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Perm State University",
+      "url": "https://www.psu.ru/",
+      "studyType": "BS",
+      "area": "Applied mathematics and informatics",
+      "startDate": "2007-09-01",
+      "endDate": "2013-06-30",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "C++",
+      "level": "Expert",
+      "keywords": [
+        "STL",
+        "Boost",
+        "Qt",
+        "CEF"
+      ]
+    },
+    {
+      "name": "Scala",
+      "level": "Expert",
+      "keywords": [
+        "Akka",
+        "Cats",
+        "Lagom"
+      ]
+    },
+    {
+      "name": "Python",
+      "level": "Expert",
+      "keywords": [
+        "Django",
+        "Flask",
+        "asyncio",
+        "aiohttp"
+      ]
+    },
+    {
+      "name": "DB",
+      "level": "Expert",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MariaDB",
+        "SQLite",
+        "Cassandra",
+        "ClickHouse"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Expert",
+      "keywords": [
+        "GitHub Actions",
+        "GitLab CI",
+        "Jenkins",
+        "Ansible",
+        "Puppet",
+        "Docker",
+        "podman",
+        "Kubernetes",
+        "GNU Make",
+        "Bash"
+      ]
+    },
+    {
+      "name": "Misc",
+      "label": "Expert",
+      "keywords": [
+        "Linux",
+        "Git",
+        "Jira",
+        "Confluence",
+        "Scrum",
+        "Kanban"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Russian",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency (C1)"
+    }
+  ],
+  "certificates": [],
+  "projects": [],
+  "publications": [],
+  "awards": [],
+  "references": [],
+  "volunteer": [
+    {
+      "organization": "PermLUG",
+      "position": "Community manager",
+      "url": "https://permlug.org/",
+      "startDate": "2011-09-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    }
+  ],
+  "interests": [],
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2026-04-21T14:39:53Z",
+    "canonical": "https://vpolyakov.cv/resume.json",
+    "theme": "consultant-polished"
+  }
+}

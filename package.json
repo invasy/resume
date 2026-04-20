@@ -1,0 +1,22 @@
+{
+  "name": "vpolyakov",
+  "version": "1.0.0",
+  "description": "",
+  "author": {
+    "name": "Vasiliy Polyakov",
+    "email": "job@vpolyakov.cv",
+    "url": "https://vpolyakov.cv/"
+  },
+  "homepage": "https://github.com/invasy/resume",
+  "main": "index.js",
+  "dependencies": {
+    "json2yamlresume": "^0.12.2",
+    "resumed": "^6.1.0",
+    "yamlresume": "^0.12.2"
+  },
+  "scripts": {
+    "render": "yamlresume build --no-pdf docs/resume.yaml",
+    "validate:json": "resumed validate docs/resume.json",
+    "validate:yaml": "yamlresume validate docs/resume.yaml"
+  }
+}

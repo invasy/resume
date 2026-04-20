@@ -1,0 +1,248 @@
+cv:
+  name: Vasiliy Polyakov
+  headline: Senior Software Engineer
+  photo:
+  location:
+  email: job@vpolyakov.cv
+  phone:
+  website: https://vpolyakov.cv
+  social_networks:
+    - network: LinkedIn
+      username: invasy
+    - network: GitHub
+      username: invasy
+  custom_connections: []
+  sections:
+    summary:
+      - Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development.
+      - Development automation specialist with a vast CI/CD and DevOps expertise.
+      - Collaborating with distributed teams in different software development stages.
+      - Constantly improving skills with new technologies and instruments.
+      - Passionate about efficiency and performance.
+      - GNU/Linux and FOSS enthusiast.
+    experience:
+      - company: NGENIX
+        position: Senior Software Engineer
+        location: Moscow, Russia (_remote_)
+        start_date: '2023-06-19'
+        end_date:
+        highlights: []
+        summary: "**Tech stack**: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes."
+      - company: M.Video-Eldorardo
+        position: Lead Software Engineer
+        location: Moscow, Russia (_remote_)
+        start_date: '2021-12-01'
+        end_date: '2022-09-30'
+        highlights:
+          - Analyzed requirements and implemented architecture for new microservices.
+          - Collaborated with agile team, managed to enhance service robustness.
+          - Facilitated internal developers meetings to share ideas and knowledge.
+        summary: "**Tech stack**: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLab CI, Kubernetes, microservices."
+      - company: Rostelecom IT
+        position: Senior Software Engineer
+        location: Perm, Russia
+        start_date: '2019-01-09'
+        end_date: '2021-12-31'
+        highlights:
+          - Developed high performance event-driven payment service with C++,
+            Qt, CEF, OpenShift.
+          - Boosted service performance by redesigning event queues.
+          - Organized and implemented CI/CD pipelines to decrease deployment
+            time from days to minutes.
+          - Initiated migration to blue-green deployment with extensive load
+            testing.
+          - Planned tasks and facilitated meetings with distributed agile team.
+          - Redesigned documentation and knowledge base structure, saved hours
+            of searching for answers.
+        summary: "**Tech stack**: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat,
+          OpenShift, JMeter, Gatling."
+      - company: Perm State University
+        position: Research Engineer
+        location: Perm, Russia
+        start_date: '2018-05-10'
+        end_date: '2018-12-31'
+        highlights:
+          - Participated in research and development project for
+            _UEC-Aviadvigatel_ funded by Russian Foundation for Basic Research.
+          - Project result is a turbine engine computational aerodynamics model
+            based on a proprietary numerical solver of Navier-Stokes equations.
+        summary: "**Tech stack**: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL,
+          Ganglia."
+      - company: Stream (MTS)
+        position: Software Engineer
+        location: Perm, Russia
+        start_date: '2017-12-01'
+        end_date: '2018-05-04'
+        highlights:
+          - Developed in-house high performance service using C++, STL, Boost,
+            Qt that allowed clients to commit payment transactions and view
+            fiscal data.
+          - Optimized event matching algorithms to decrease server load by 21%
+            on average.
+        summary: "**Tech stack**: C++, STL, Boost, CMake."
+      - company: Perm State University
+        position: Chief of Laboratory and Research Engineer
+        location: Perm, Russia
+        start_date: '2012-10-01'
+        end_date: '2017-12-01'
+        highlights:
+          - Researched and developed HPC applications (fluid mechanics,
+            aerodynamics, linguistics).
+          - Tasks, projects, and people management.
+          - HPC clusters administration and maintenance.
+          - Popularization of science, public lectures, science events and
+            festivals.
+        summary: "**Tech stack**: C++, Fortran90, OpenMP, OpenMPI CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL."
+    education:
+      - institution: Perm State University
+        area: Applied mathematics and informatics
+        degree: BS
+        start_date: '2007-09-01'
+        end_date: '2013-08-31'
+        highlights: []
+        location: Perm, Russia
+    technologies:
+      - label: C++
+        details: STL, Boost, Qt, CEF
+      - label: Scala
+        details: Akka, Cats, Lagom
+      - label: Python
+        details: Django, Flask, Connexion, asyncio, SQLAlchemy, Pydantic
+      - label: DB
+        details: PostgreSQL, MySQL, ClickHouse, Cassandra
+      - label: DevOps
+        details: GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash
+      - label: Misc
+        details: Linux, Git, Jira, Confluence, Scrum, Kanban
+    volunteer:
+      - name: PermLUG
+        start_date: 2011-09-01
+        summary: Community Manager
+
+design:
+  theme: engineeringresumes
+  page:
+    size: a4
+    top_margin: 1cm
+    bottom_margin: 1cm
+    left_margin: 2cm
+    right_margin: 2cm
+    show_footer: true
+    show_top_note: false
+  colors:
+    body: rgb(0, 0, 0)
+    name: rgb(0, 0, 0)
+    headline: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 0, 0)
+    links: rgb(0, 0, 0)
+    footer: rgb(128, 128, 128)
+    top_note: rgb(128, 128, 128)
+  typography:
+    line_spacing: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+    font_family:
+      body: XCharter
+      name: XCharter
+      headline: XCharter
+      connections: XCharter
+      section_titles: XCharter
+    font_size:
+      body: 10pt
+      name: 25pt
+      headline: 10pt
+      connections: 10pt
+      section_titles: 1.2em
+    small_caps:
+      name: false
+      headline: false
+      connections: false
+      section_titles: false
+    bold:
+      name: false
+      headline: false
+      connections: false
+      section_titles: true
+  links:
+    underline: true
+    show_external_link_icon: false
+  header:
+    alignment: center
+    photo_width: 3.5cm
+    photo_position: left
+    photo_space_left: 0.4cm
+    photo_space_right: 0.4cm
+    space_below_name: 0.7cm
+    space_below_headline: 0.7cm
+    space_below_connections: 0.7cm
+    connections:
+      phone_number_format: international
+      hyperlink: true
+      show_icons: false
+      display_urls_instead_of_usernames: true
+      separator: '|'
+      space_between_connections: 0.5cm
+  section_titles:
+    type: with_full_line
+    line_thickness: 0.5pt
+    space_above: 0.5cm
+    space_below: 0.3cm
+  sections:
+    allow_page_break: true
+    space_between_regular_entries: 0.42cm
+    space_between_text_based_entries: 0.15cm
+    show_time_spans_in: []
+  entries:
+    date_and_location_width: 4.15cm
+    side_space: 0cm
+    space_between_columns: 0.1cm
+    allow_page_break: false
+    short_second_row: false
+    degree_width: 1cm
+    summary:
+      space_above: 0.08cm
+      space_left: 0cm
+    highlights:
+      bullet: ●
+      nested_bullet: ●
+      space_left: 0cm
+      space_above: 0.08cm
+      space_between_items: 0.08cm
+      space_between_bullet_and_text: 0.3em
+  templates:
+    footer: 'PAGE_NUMBER/TOTAL_PAGES'
+    top_note: '*LAST_UPDATED CURRENT_DATE*'
+    single_date: MONTH_ABBREVIATION YEAR
+    date_range: START_DATE – END_DATE
+    time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+    one_line_entry:
+      main_column: '**LABEL:** DETAILS'
+    education_entry:
+      main_column: |-
+        **INSTITUTION**, DEGREE_WITH_AREA -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      degree_column:
+      date_and_location_column: DATE
+    normal_entry:
+      main_column: |-
+        **NAME** -- **LOCATION**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+    experience_entry:
+      main_column: |-
+        **POSITION**, COMPANY -- LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+    publication_entry:
+      main_column: |-
+        **TITLE**
+        SUMMARY
+        AUTHORS
+        URL (JOURNAL)
+      date_and_location_column: DATE
+settings:
+  pdf_title: NAME - CV

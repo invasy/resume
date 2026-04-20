@@ -1,0 +1,191 @@
+\documentclass[a4paper, serif, 12pt]{moderncv}
+
+%% moderncv
+% style and color
+\moderncvstyle{banking}
+\moderncvcolor{black}
+
+%% page layout/margins
+\usepackage[top=1.5cm, bottom=1.5cm, left=2.0cm, right=2.0cm]{geometry}
+
+%% Babel config for English language
+\usepackage[english]{babel}
+
+%% fontspec
+\usepackage{fontspec}
+
+\IfFontExistsTF{Linux Libertine}{
+  \setmainfont[Ligatures={TeX, Common}, Numbers=OldStyle]{Linux Libertine}
+}{}
+\IfFontExistsTF{Linux Libertine O}{
+  \setmainfont[Ligatures={TeX, Common}, Numbers=OldStyle]{Linux Libertine O}
+}{}
+
+%% CTeX
+% CJK support, used to show CJK characters in the resume
+%
+% - fontset=none: disable builtin fontset but instead set the CJK font manually
+% - heading=false: disable ctex heading
+% - punct=kaiming: use kaiming punctuations styles for CJK
+% - scheme=plain: use plain scheme, do not override \normalsize font size
+% - space=auto: space settings for CJK characters
+%
+% ref:
+% - http://ctan.mirrorcatalogs.com/language/chinese/ctex/ctex.pdf
+\usepackage[UTF8, heading=false, punct=kaiming, scheme=plain, space=auto]{ctex}
+
+\IfFontExistsTF{Noto Serif CJK SC}{
+  \setCJKmainfont{Noto Serif CJK SC}
+}{}
+\IfFontExistsTF{Noto Sans CJK SC}{
+  \setCJKsansfont{Noto Sans CJK SC}
+}{}
+
+%% line spacing
+\usepackage{setspace}
+\setstretch{1.125}
+
+%% URL styling - use normal text instead of monospace
+\urlstyle{same}
+
+%% Patch \httplink and \httpslink to handle full URLs
+% The original moderncv macros always prepend http:// or https:// to URLs.
+% This causes issues when the URL already has a protocol (e.g., https://example.com)
+% resulting in malformed URLs like https://https://example.com.
+% This patch checks if the URL already contains "://" and uses it directly if so.
+% Note: We use \str_set:Nx (x-expansion) to expand macros like \@homepage first.
+\ExplSyntaxOn
+\str_new:N \g_yamlresume_url_str
+
+\RenewDocumentCommand{\httpslink}{O{}m}{
+  \str_set:Nx \g_yamlresume_url_str {#2}
+  \str_if_in:NnTF \g_yamlresume_url_str {://}
+    { \url{#2} }
+    { \url{https://#2} }
+}
+
+\RenewDocumentCommand{\httplink}{O{}m}{
+  \str_set:Nx \g_yamlresume_url_str {#2}
+  \str_if_in:NnTF \g_yamlresume_url_str {://}
+    { \url{#2} }
+    { \url{http://#2} }
+}
+\ExplSyntaxOff
+
+\name{Vasiliy Polyakov}{}
+\title{Senior Software Engineer}
+\email{job@vpolyakov.cv}
+\homepage{https://vpolyakov.cv/}
+
+\extrainfo{{\small \faLinkedin}\ \href{https://www.linkedin.com/in/invasy/}{@invasy} {} {} {} • {} {} {} 
+{\small \faGithub}\ \href{https://github.com/invasy}{@invasy}}
+
+\begin{document}
+
+\maketitle
+
+\section{Basics}
+
+\cvline{}{\begin{itemize}
+\item Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development.
+\item Development automation specialist with a vast CI/CD and DevOps expertise.
+\item Collaborating with distributed teams in different software development stages.
+\item Constantly improving skills with new technologies and instruments.
+\item Passionate about efficiency and performance.
+\item GNU/Linux and FOSS enthusiast.
+\end{itemize}}
+
+\section{Work}
+
+\cventry{Jun 2023–Present}
+        {Senior Software Engineer}
+        {NGENIX}
+        {\url{https://ngenix.net/}}
+        {}
+        {\textbf{Keywords}: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes}
+
+\cventry{Dec 2021–Sep 2022}
+        {Lead Software Engineer}
+        {M.Video-Eldorardo}
+        {\url{https://www.mvideoeldorado.ru/}}
+        {}
+        {\begin{itemize}
+\item Analyzed requirements and implemented architecture for new microservices.
+\item Collaborated with agile team, managed to enhance service robustness.
+\item Facilitated internal developers meetings to share ideas and knowledge.
+\end{itemize}
+\textbf{Keywords}: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLabCI, Kubernetes, microservices}
+
+\cventry{Jan 2019–Dec 2021}
+        {Senior Software Engineer}
+        {Rostelecom IT}
+        {\url{https://www.rt.ru/}}
+        {}
+        {\begin{itemize}
+\item Developed high performance event-driven payment service with C++, Qt, CEF, OpenShift.
+\item Boosted service performance by redesigning event queues.
+\item Organized and implemented CI/CD pipelines to decrease deployment time from days to minutes.
+\item Initiated migration to blue-green deployment with extensive load testing.
+\item Planned tasks and facilitated meetings with distributed agile team.
+\item Redesigned documentation and knowledge base structure, saved hours of searching for answers.
+\end{itemize}
+\textbf{Keywords}: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat, OpenShift, JMeter, Gatling}
+
+\cventry{May 2018–Dec 2018}
+        {Research Engineer}
+        {Perm State University}
+        {\url{https://www.psu.ru/}}
+        {}
+        {\begin{itemize}
+\item Participated in research and development project for \textit{UEC-Aviadvigatel} funded by Russian Foundation for Basic Research.
+\item Project result is a turbine engine computational aerodynamics model based on a proprietary numerical solver of Navier-Stokes equations.
+\end{itemize}
+\textbf{Keywords}: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL, Ganglia}
+
+\cventry{Dec 2017–May 2018}
+        {Software Engineer}
+        {Stream (MTS)}
+        {\url{https://mts.ru/}}
+        {}
+        {\begin{itemize}
+\item Developed in-house high performance service using C++, STL, Boost, Qt that allowed clients to commit payment transactions and view fiscal data.
+\item Optimized event matching algorithms to decrease server load by 21\% on average.
+\end{itemize}
+\textbf{Keywords}: C++, STL, Boost, CMake}
+
+\cventry{Oct 2012–Dec 2017}
+        {Chief of Laboratory and Research Engineer}
+        {Perm State University}
+        {\url{https://www.psu.ru/}}
+        {}
+        {\begin{itemize}
+\item Researched and developed HPC applications (fluid mechanics, aerodynamics, linguistics).
+\item Tasks, projects, and people management.
+\item HPC clusters administration and maintenance.
+\item Popularization of science, public lectures, science events and festivals.
+\end{itemize}
+\textbf{Keywords}: C++, Fortran90, OpenMP, OpenMPI, CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL, CentOS}
+
+\section{Education}
+
+\cventry{Sep 2007–Aug 2013}
+        {Bachelor, Applied mathematics and informatics}
+        {Perm State University}
+        {\url{https://www.psu.ru/}}
+        {}
+        {}
+
+\section{Skills}
+
+\cvline{C++}{Expert \hfill \textbf{Keywords}: STL, Boost, Qt, CEF}
+\cvline{Scala}{Expert \hfill \textbf{Keywords}: Akka, Cats, Lagom}
+\cvline{Python}{Expert \hfill \textbf{Keywords}: Django, Flask, Connexion, asyncio, SQLAlchemy, Pydantic}
+\cvline{DB}{Expert \hfill \textbf{Keywords}: PostgreSQL, MySQL, ClickHouse, Cassandra}
+\cvline{DevOps}{Expert \hfill \textbf{Keywords}: GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash}
+\cvline{Misc}{Expert \hfill \textbf{Keywords}: Linux, Git, Jira, Confluence, Scrum, Kanban}
+
+\section{Languages}
+
+\cvline{Russian}{Native or Bilingual Proficiency}
+\cvline{English}{Full Professional Proficiency}
+\end{document}
