@@ -1,22 +1,60 @@
 {
   "name": "vpolyakov",
   "version": "1.0.0",
-  "description": "",
+  "description": "Resume of Vasiliy Polyakov",
   "author": {
     "name": "Vasiliy Polyakov",
     "email": "job@vpolyakov.cv",
     "url": "https://vpolyakov.cv/"
   },
+  "license": "MIT",
+  "keywords": [
+    "jsonresume-theme",
+    "jsonresume",
+    "resume",
+    "cv",
+    "theme",
+    "minimal",
+    "modern"
+  ],
   "homepage": "https://github.com/invasy/resume",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/invasy/resume"
+  },
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
+    "@jsonresume/jsonresume-theme-consultant-polished": "^1.0.3",
+    "handlebars": "^4.7.8",
+    "marked": "^18.0.5",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "resume-cli": "^3.7.2",
+    "styled-components": "^6.4.2"
+  },
+  "devDependencies": {
+    "@jsonresume/core": "^0.1.0",
+    "@resume/core": "npm:@jsonresume/core@^0.1.0",
     "json2yamlresume": "^0.12.2",
+    "jsonresume-theme-modern-classic": "^1.0.0",
+    "jsonresume-theme-operations-precision": "^0.1.0",
+    "puppeteer": "^24.0.0",
     "resumed": "^6.1.0",
-    "yamlresume": "^0.12.2"
+    "yamlresume": "^0.12.3"
   },
   "scripts": {
-    "render": "yamlresume build --no-pdf docs/resume.yaml",
+    "validate:schema": "node --eval \"import('@jsonresume/schema').then(s=>s.default.validate(JSON.parse(require('fs').readFileSync('resume.json','utf8')),(e,r)=>{if(e){console.error(e);process.exit(1)} else console.log('Schema valid')}))\"",
     "validate:json": "resumed validate docs/resume.json",
-    "validate:yaml": "yamlresume validate docs/resume.yaml"
+    "validate:yaml": "yamlresume validate docs/resume.yaml",
+    "render:html": "resumed render docs/resume.json --theme . --output docs/index.html",
+    "render:pdf": "resumed export docs/resume.json --theme . --output docs/resume.pdf",
+    "render:yaml": "yamlresume build --no-pdf docs/resume.yaml",
+    "render:latex": "rendercv render docs/cv.yaml",
+    "convert:rendercv": "npx @jsonresume/jsonresume-to-rendercv docs/resume.json",
+    "preview": "npx serve docs",
+    "clean": "rm -rf public rendercv_output"
   }
 }

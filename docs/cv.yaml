@@ -1,3 +1,4 @@
+--- # RenderCV
 cv:
   name: Vasiliy Polyakov
   headline: Senior Software Engineer
@@ -26,8 +27,16 @@ cv:
         location: Moscow, Russia (_remote_)
         start_date: '2023-06-19'
         end_date:
-        highlights: []
-        summary: "**Tech stack**: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes."
+        highlights:
+          - "Developed the central control plane for the edge platform: stateful Python service for managing business entities."
+          - Designed OpenAPI-driven REST APIs (Tornado, aiohttp, FastAPI) on PostgreSQL/SQLAlchemy, Redis, Consul, Vault.
+          - Built event-driven audit logging and integration pipelines meeting regulatory compliance requirements.
+          - Maintained 140K-line codebase with 4,400+ automated tests, Prometheus monitoring, and Sentry error tracking.
+          - "Managed project feature delivery, estimated and planned workload, coordinated with frontend, SRE, and platform teams."
+          - Mentored mid-level developers through code reviews, design reviews, and onboarding.
+        summary: >-
+          **Tech stack**: Python, Flask, FastAPI, OpenAPI, Starlette, SQLAlchemy, Lua, nginx,
+          PostgreSQL, Consul, ClickHouse, VictoriaMetrics, Prometheus, GitLab CI, Kubernetes.
       - company: M.Video-Eldorardo
         position: Lead Software Engineer
         location: Moscow, Russia (_remote_)
@@ -37,7 +46,8 @@ cv:
           - Analyzed requirements and implemented architecture for new microservices.
           - Collaborated with agile team, managed to enhance service robustness.
           - Facilitated internal developers meetings to share ideas and knowledge.
-        summary: "**Tech stack**: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLab CI, Kubernetes, microservices."
+        summary: >-
+          **Tech stack**: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLab CI, Kubernetes, microservices.
       - company: Rostelecom IT
         position: Senior Software Engineer
         location: Perm, Russia
@@ -54,8 +64,9 @@ cv:
           - Planned tasks and facilitated meetings with distributed agile team.
           - Redesigned documentation and knowledge base structure, saved hours
             of searching for answers.
-        summary: "**Tech stack**: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat,
-          OpenShift, JMeter, Gatling."
+        summary: >-
+          **Tech stack**: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat,
+          OpenShift, JMeter, Gatling.
       - company: Perm State University
         position: Research Engineer
         location: Perm, Russia
@@ -66,8 +77,8 @@ cv:
             _UEC-Aviadvigatel_ funded by Russian Foundation for Basic Research.
           - Project result is a turbine engine computational aerodynamics model
             based on a proprietary numerical solver of Navier-Stokes equations.
-        summary: "**Tech stack**: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL,
-          Ganglia."
+        summary: >-
+          **Tech stack**: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL, Ganglia.
       - company: Stream (MTS)
         position: Software Engineer
         location: Perm, Russia
@@ -90,9 +101,10 @@ cv:
             aerodynamics, linguistics).
           - Tasks, projects, and people management.
           - HPC clusters administration and maintenance.
-          - Popularization of science, public lectures, science events and
-            festivals.
-        summary: "**Tech stack**: C++, Fortran90, OpenMP, OpenMPI CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL."
+          - Popularization of science, public lectures, science events and festivals.
+        summary: >-
+          **Tech stack**: C++, Fortran90, OpenMP, OpenMPI CUDA, Hadoop,
+          Perl, Ruby on Rails, Redmine, RHEL.
     education:
       - institution: Perm State University
         area: Applied mathematics and informatics
@@ -103,7 +115,7 @@ cv:
         location: Perm, Russia
     technologies:
       - label: C++
-        details: STL, Boost, Qt, CEF
+        details: STL, Boost, Qt, CEF, CMake, Conan
       - label: Scala
         details: Akka, Cats, Lagom
       - label: Python
@@ -114,10 +126,10 @@ cv:
         details: GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash
       - label: Misc
         details: Linux, Git, Jira, Confluence, Scrum, Kanban
-    volunteer:
-      - name: PermLUG
-        start_date: 2011-09-01
-        summary: Community Manager
+    # volunteer:
+    #   - name: PermLUG
+    #     start_date: 2011-09-01
+    #     summary: Community Manager
 
 design:
   theme: engineeringresumes
@@ -245,4 +257,4 @@ design:
         URL (JOURNAL)
       date_and_location_column: DATE
 settings:
-  pdf_title: NAME - CV
+  pdf_title: NAME Résumé

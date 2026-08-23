@@ -1,0 +1,9 @@
+.devcontainer/
+.editorconfig
+.github/
+.gitlab-ci.yml
+docs/
+public/
+rendercv_output/
+cv.yaml
+Makefile

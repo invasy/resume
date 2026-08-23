@@ -1,504 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vasiliy Polyakov // Software Engineer</title>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <style>
-    :root {
-      --text-font-size: 16px;
-      --text-font-family: var(--text-default-font-family);
-      --line-height: 1.5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Vasiliy Polyakov // Senior Software Engineer</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
+        integrity="sha512-Pmhg2i/F7+5+7SsdoUqKeH7UAZoVMYb1sxGOoJ0jWXAEHP0XV2H4CITyK267eHWp2jpj7rtqWNkmEOw1tNyYpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.css" integrity="sha384-PDbUeNCuE6bOPudPOgFyIUEy3UJawJVwr3XlGO90FIuf5qNIoTLSgOJo/dC2ZXV/" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.js" integrity="sha384-VkqWq8xtm5YQk1BBXczQ8/Sx+DlCzF8cuS43bZwmtVXzRFtyLTqTCdP7MKmKo+KN" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [{ left: '$$',  right: '$$',  display: false }]});"></script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
 
-    /* 1. Use a more-intuitive box-sizing model */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    /* 2. Remove default margin */
-    *:not(dialog) {
-      margin: 0;
-    }
-
-    body {
-      /* 3. Improve text rendering */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    :root {
-      --border-color: #d0d0d0;
-
-      /* text colors */
-      --text-color-primary: #000000;
-      --text-color-secondary: #333333;
-
-      /* spacing */
-      --spacing-xss: 2px;
-      --spacing-xs: 4px;
-      --spacing-sm: 8px;
-      --spacing-md: 12px;
-      --spacing-lg: 16px;
-      --spacing-xl: 24px;
-      --spacing-xxl: 40px;
-      --spacing-xxxl: 80px;
-
-      /* font sizes */
-      --font-size-xs: 0.8rem;
-      --font-size-sm: 0.9rem;
-      --font-size-md: 1rem;
-      --font-size-lg: 1.1rem;
-      --font-size-xl: 1.25rem;
-      --font-size-xxl: 2.5rem;
-
-      /* layout */
-      --page-max-width: 900px;
-
-      /* typography */
-      --text-default-font-family:
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-        Cantarell, sans-serif;
-    }
-
-    html {
-      font-size: var(--text-font-size);
-    }
-
-    body {
-      /* font & text */
-      color: var(--text-color-primary);
-      font-family: var(--text-font-family);
-      /* this variable is defined by `typography.fontSize` in resume html layout */
-      text-autospace: normal;
-
-      /* layout */
-      line-height: var(--line-height);
-      max-width: var(--page-max-width);
-      margin: 0 auto;
-      padding: var(--spacing-xxxl) var(--spacing-xxl) var(--spacing-xxl);
-    }
-
-    /* header */
-    .resume-header {
-      margin-bottom: var(--spacing-xxl);
-      text-align: center;
-    }
-
-    .resume-name {
-      font-size: var(--font-size-xxl);
-      font-weight: 600;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .resume-headline {
-      font-size: var(--font-size-lg);
-      margin-bottom: var(--spacing-md);
-    }
-
-    /* contact info */
-    .resume-contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      column-gap: var(--spacing-lg);
-      row-gap: var(--spacing-xs);
-      margin-top: var(--spacing-sm);
-    }
-
-    .resume-contact-icon,
-    .resume-contact-label {
-      margin-right: var(--spacing-sm);
-      vertical-align: middle;
-    }
-
-    /* links: modern typographic style */
-    a {
-      color: var(--text-color-primary);
-      text-decoration: underline;
-      text-decoration-color: var(--border-color);
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
-      text-decoration-skip-ink: auto;
-      transition: text-decoration-color 0.2s;
-    }
-
-    a:hover {
-      text-decoration-color: var(--text-color-primary);
-    }
-
-    /* sections */
-    .resume-section {
-      margin-bottom: var(--spacing-xl);
-    }
-
-    .resume-section-title {
-      font-size: var(--font-size-xl);
-      font-weight: 500;
-      margin-bottom: var(--spacing-md);
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: var(--spacing-xs);
-    }
-
-    /* entries */
-    .resume-entry {
-      margin-bottom: var(--spacing-lg);
-    }
-
-    .resume-entry:last-child {
-      margin-bottom: 0;
-    }
-
-    .resume-entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .resume-entry-title {
-      font-weight: 500;
-      margin-bottom: var(--spacing-xss);
-    }
-
-    .resume-entry-summary p,
-    .resume-summary-content p {
-      margin-bottom: var(--spacing-xs);
-    }
-
-    /* lists */
-    .resume-entry-summary ul,
-    .resume-entry-summary ol,
-    .resume-summary-content ul,
-    .resume-summary-content ol {
-      padding-left: var(--spacing-lg);
-      list-style-type: circle;
-    }
-
-    /* labeled lists (courses, keywords, etc.) */
-    .resume-labeled-list span {
-      font-weight: 500;
-    }
-
-    /* skills grid */
-    .resume-skill-item,
-    .resume-language-item {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .resume-skill-name,
-    .resume-language-name {
-      font-weight: 500;
-    }
-
-    .resume-skill-level,
-    .resume-language-fluency {
-      font-weight: 400;
-    }
-
-    /* mobile */
-    @media (max-width: 768px) {
-      body {
-        padding: var(--spacing-xl);
-      }
-
-      .resume-header {
-        margin-bottom: var(--spacing-xl);
-      }
-
-      .resume-contact-info {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .resume-entry-header {
-        flex-wrap: wrap;
-      }
-
-      .resume-skill-item,
-      .resume-language-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    /* footer */
-    .resume-footer {
-      margin-top: var(--spacing-xxl);
-      padding-top: var(--spacing-xl);
-      border-top: 1px solid var(--border-color);
-      font-size: var(--font-size-sm);
-      color: var(--text-color-secondary);
-    }
-
-    @media print {
-      .resume-footer {
-        display: none;
-      }
-    }
-  </style>
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <header class="resume-header">
-    <h1 class="resume-name">Vasiliy Polyakov</h1>
-    <p class="resume-headline">Senior Software Engineer</p>
-    <div class="resume-contact-info">
-      <span class="resume-contact-item"><span class="resume-contact-icon">📧</span><a href="mailto:job@vpolyakov.cv" class="resume-contact-link">job@vpolyakov.cv</a></span>
-      <span class="resume-contact-item"><span class="resume-contact-icon">🔗</span><a href="https://vpolyakov.cv/" class="resume-contact-link">https://vpolyakov.cv/</a></span>
-    </div>
-
-    <div class="resume-contact-info resume-profiles-info">
-      <span class="resume-contact-item"><span class="resume-contact-label">LinkedIn</span>: <a href="https://www.linkedin.com/in/invasy/" class="resume-contact-link">@invasy</a></span>
-      <span class="resume-contact-item"><span class="resume-contact-label">GitHub</span>: <a href="https://github.com/invasy" class="resume-contact-link">@invasy</a></span>
-    </div>
-  </header>
-  <section class="resume-section" data-section="summary">
-    <h2 class="resume-section-title">Basics</h2>
-    <div class="resume-section-content">
-      <div class="resume-summary-content">
+    <article class="markdown-body">
+        <h1>Vasiliy Polyakov</h1>
         <ul>
-          <li>
-            <p>Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development.</p>
-          </li>
-          <li>
-            <p>Development automation specialist with a vast CI/CD and DevOps expertise.</p>
-          </li>
-          <li>
-            <p>Collaborating with distributed teams in different software development stages.</p>
-          </li>
-          <li>
-            <p>Constantly improving skills with new technologies and instruments.</p>
-          </li>
-          <li>
-            <p>Passionate about efficiency and performance.</p>
-          </li>
-          <li>
-            <p>GNU/Linux and FOSS enthusiast.</p>
-          </li>
+        <li>Email: <a href="mailto:job@vpolyakov.cv">job@vpolyakov.cv</a></li>
+        <li>Website: <a href="https://vpolyakov.cv/">vpolyakov.cv</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/invasy">invasy</a></li>
+        <li>GitHub: <a href="https://github.com/invasy">invasy</a></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="resume-section" data-section="work">
-    <h2 class="resume-section-title">Work</h2>
-    <div class="resume-section-content">
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://ngenix.net/">NGENIX</a></div>
-            <div class="resume-entry-organization">Senior Software Engineer</div>
-          </div>
-          <div class="resume-entry-date">Jun 2023–Present</div>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes</div>
-      </div>
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://www.mvideoeldorado.ru/">M.Video-Eldorardo</a></div>
-            <div class="resume-entry-organization">Lead Software Engineer</div>
-          </div>
-          <div class="resume-entry-date">Dec 2021–Sep 2022</div>
-        </div>
-        <div class="resume-entry-summary">
-          <ul>
-            <li>
-              <p>Analyzed requirements and implemented architecture for new microservices.</p>
-            </li>
-            <li>
-              <p>Collaborated with agile team, managed to enhance service robustness.</p>
-            </li>
-            <li>
-              <p>Facilitated internal developers meetings to share ideas and knowledge.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLabCI, Kubernetes, microservices</div>
-      </div>
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://www.rt.ru/">Rostelecom IT</a></div>
-            <div class="resume-entry-organization">Senior Software Engineer</div>
-          </div>
-          <div class="resume-entry-date">Jan 2019–Dec 2021</div>
-        </div>
-        <div class="resume-entry-summary">
-          <ul>
-            <li>
-              <p>Developed high performance event-driven payment service with C++, Qt, CEF, OpenShift.</p>
-            </li>
-            <li>
-              <p>Boosted service performance by redesigning event queues.</p>
-            </li>
-            <li>
-              <p>Organized and implemented CI/CD pipelines to decrease deployment time from days to minutes.</p>
-            </li>
-            <li>
-              <p>Initiated migration to blue-green deployment with extensive load testing.</p>
-            </li>
-            <li>
-              <p>Planned tasks and facilitated meetings with distributed agile team.</p>
-            </li>
-            <li>
-              <p>Redesigned documentation and knowledge base structure, saved hours of searching for answers.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat, OpenShift, JMeter, Gatling</div>
-      </div>
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://www.psu.ru/">Perm State University</a></div>
-            <div class="resume-entry-organization">Research Engineer</div>
-          </div>
-          <div class="resume-entry-date">May 2018–Dec 2018</div>
-        </div>
-        <div class="resume-entry-summary">
-          <ul>
-            <li>
-              <p>Participated in research and development project for <em>UEC-Aviadvigatel</em> funded by Russian Foundation for Basic Research.</p>
-            </li>
-            <li>
-              <p>Project result is a turbine engine computational aerodynamics model based on a proprietary numerical solver of Navier-Stokes equations.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL, Ganglia</div>
-      </div>
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://mts.ru/">Stream (MTS)</a></div>
-            <div class="resume-entry-organization">Software Engineer</div>
-          </div>
-          <div class="resume-entry-date">Dec 2017–May 2018</div>
-        </div>
-        <div class="resume-entry-summary">
-          <ul>
-            <li>
-              <p>Developed in-house high performance service using C++, STL, Boost, Qt that allowed clients to commit payment transactions and view fiscal data.</p>
-            </li>
-            <li>
-              <p>Optimized event matching algorithms to decrease server load by 21% on average.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: C++, STL, Boost, CMake</div>
-      </div>
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://www.psu.ru/">Perm State University</a></div>
-            <div class="resume-entry-organization">Chief of Laboratory and Research Engineer</div>
-          </div>
-          <div class="resume-entry-date">Oct 2012–Dec 2017</div>
-        </div>
-        <div class="resume-entry-summary">
-          <ul>
-            <li>
-              <p>Researched and developed HPC applications (fluid mechanics, aerodynamics, linguistics).</p>
-            </li>
-            <li>
-              <p>Tasks, projects, and people management.</p>
-            </li>
-            <li>
-              <p>HPC clusters administration and maintenance.</p>
-            </li>
-            <li>
-              <p>Popularization of science, public lectures, science events and festivals.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="resume-labeled-list"><span>Keywords</span>: C++, Fortran90, OpenMP, OpenMPI, CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL, CentOS</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="resume-section" data-section="education">
-    <h2 class="resume-section-title">Education</h2>
-    <div class="resume-section-content">
-      <div class="resume-entry">
-        <div class="resume-entry-header">
-          <div>
-            <div class="resume-entry-title"><a href="https://www.psu.ru/">Perm State University</a></div>
-            <div class="resume-entry-organization">Bachelor, Applied mathematics and informatics</div>
-          </div>
-          <div class="resume-entry-date">Sep 2007–Aug 2013</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="resume-section" data-section="skills">
-    <h2 class="resume-section-title">Skills</h2>
-    <div class="resume-section-content">
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">C++<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: STL, Boost, Qt, CEF</div>
-        </div>
-      </div>
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">Scala<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: Akka, Cats, Lagom</div>
-        </div>
-      </div>
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">Python<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: Django, Flask, Connexion, asyncio, SQLAlchemy, Pydantic</div>
-        </div>
-      </div>
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">DB<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: PostgreSQL, MySQL, ClickHouse, Cassandra</div>
-        </div>
-      </div>
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">DevOps<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash</div>
-        </div>
-      </div>
-      <div class="resume-skill-item">
-        <div class="resume-skill-name">Misc<span class="resume-skill-level">: Expert</span></div>
-        <div>
-          <div class="resume-labeled-list"><span>Keywords</span>: Linux, Git, Jira, Confluence, Scrum, Kanban</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="resume-section" data-section="languages">
-    <h2 class="resume-section-title">Languages</h2>
-    <div class="resume-section-content">
-      <div class="resume-languages-list">
-        <div class="resume-language-item">
-          <div class="resume-language-name">Russian<span class="resume-language-fluency">: Native or Bilingual Proficiency</span></div>
-        </div>
-        <div class="resume-language-item">
-          <div class="resume-language-name">English<span class="resume-language-fluency">: Full Professional Proficiency</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="resume-footer">Generated by <a href="https://yamlresume.dev">YAMLResume</a></footer>
+        <h2>Summary</h2>
+        <ul>
+        <li>Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development.</li>
+        <li>Development automation specialist with a vast CI/CD and DevOps expertise.</li>
+        <li>Collaborating with distributed teams in different software development stages.</li>
+        <li>Constantly improving skills with new technologies and instruments.</li>
+        <li>Passionate about efficiency and performance.</li>
+        <li>GNU/Linux and FOSS enthusiast.</li>
+        </ul>
+        <h2>Experience</h2>
+        <h3><strong>Senior Software Engineer</strong>, NGENIX — Moscow, Russia (<em>remote</em>)</h3>
+        <p>June 2023 – present</p>
+        <p><strong>Tech stack</strong>: Python, Flask, FastAPI, OpenAPI, Starlette, SQLAlchemy, Lua, nginx, PostgreSQL, Consul, ClickHouse, VictoriaMetrics, Prometheus, GitLab CI, Kubernetes.</p>
+        <ul>
+        <li>Developed the central control plane for the edge platform: stateful Python service for managing business entities.</li>
+        <li>Designed OpenAPI-driven REST APIs (Tornado, aiohttp, FastAPI) on PostgreSQL/SQLAlchemy, Redis, Consul, Vault.</li>
+        <li>Built event-driven audit logging and integration pipelines meeting regulatory compliance requirements.</li>
+        <li>Maintained 140K-line codebase with 4,400+ automated tests, Prometheus monitoring, and Sentry error tracking.</li>
+        <li>Managed project feature delivery, estimated and planned workload, coordinated with frontend, SRE, and platform teams.</li>
+        <li>Mentored mid-level developers through code reviews, design reviews, and onboarding.</li>
+        </ul>
+        <h3><strong>Lead Software Engineer</strong>, M.Video-Eldorardo — Moscow, Russia (<em>remote</em>)</h3>
+        <p>Dec 2021 – Sept 2022</p>
+        <p><strong>Tech stack</strong>: Scala, Akka, Lagom, Cassandra, Elastic Stack, SAP, GitLab CI, Kubernetes, microservices.</p>
+        <ul>
+        <li>Analyzed requirements and implemented architecture for new microservices.</li>
+        <li>Collaborated with agile team, managed to enhance service robustness.</li>
+        <li>Facilitated internal developers meetings to share ideas and knowledge.</li>
+        </ul>
+        <h3><strong>Senior Software Engineer</strong>, Rostelecom IT — Perm, Russia</h3>
+        <p>Jan 2019 – Dec 2021</p>
+        <p><strong>Tech stack</strong>: C++, Qt, CEF, Scala, Oracle, GitLabCI, Tomcat, OpenShift, JMeter, Gatling.</p>
+        <ul>
+        <li>Developed high performance event-driven payment service with C++, Qt, CEF, OpenShift.</li>
+        <li>Boosted service performance by redesigning event queues.</li>
+        <li>Organized and implemented CI/CD pipelines to decrease deployment time from days to minutes.</li>
+        <li>Initiated migration to blue-green deployment with extensive load testing.</li>
+        <li>Planned tasks and facilitated meetings with distributed agile team.</li>
+        <li>Redesigned documentation and knowledge base structure, saved hours of searching for answers.</li>
+        </ul>
+        <h3><strong>Research Engineer</strong>, Perm State University — Perm, Russia</h3>
+        <p>May 2018 – Dec 2018</p>
+        <p><strong>Tech stack</strong>: C++, Fortran 90, CUDA, OpenMP, OpenMPI, OpenHPC, RHEL, Ganglia.</p>
+        <ul>
+        <li>Participated in research and development project for <em>UEC-Aviadvigatel</em> funded by Russian Foundation for Basic Research.</li>
+        <li>Project result is a turbine engine computational aerodynamics model based on a proprietary numerical solver of Navier-Stokes equations.</li>
+        </ul>
+        <h3><strong>Software Engineer</strong>, Stream (MTS) — Perm, Russia</h3>
+        <p>Dec 2017 – May 2018</p>
+        <p><strong>Tech stack</strong>: C++, STL, Boost, CMake.</p>
+        <ul>
+        <li>Developed in-house high performance service using C++, STL, Boost, Qt that allowed clients to commit payment transactions and view fiscal data.</li>
+        <li>Optimized event matching algorithms to decrease server load by 21% on average.</li>
+        </ul>
+        <h2><strong>Chief of Laboratory and Research Engineer</strong>, Perm State University — Perm, Russia</h2>
+        <p>Oct 2012 – Dec 2017</p>
+        <p><strong>Tech stack</strong>: C++, Fortran90, OpenMP, OpenMPI CUDA, Hadoop, Perl, Ruby on Rails, Redmine, RHEL.</p>
+        <ul>
+        <li>Researched and developed HPC applications (fluid mechanics, aerodynamics, linguistics).</li>
+        <li>Tasks, projects, and people management.</li>
+        <li>HPC clusters administration and maintenance.</li>
+        <li>Popularization of science, public lectures, science events and festivals.</li>
+        </ul>
+        <h2>Education</h2>
+        <h3><strong>Perm State University</strong>, BS in Applied mathematics and informatics — Perm, Russia</h3>
+        <p>Sept 2007 – Aug 2013</p>
+        <h2>Technologies</h2>
+        <ul>
+        <li><strong>C++:</strong> STL, Boost, Qt, CEF, CMake, Conan</li>
+        <li><strong>Scala:</strong> Akka, Cats, Lagom</li>
+        <li><strong>Python:</strong> Django, Flask, Connexion, asyncio, SQLAlchemy, Pydantic</li>
+        <li><strong>DB:</strong> PostgreSQL, MySQL, ClickHouse, Cassandra</li>
+        <li><strong>DevOps:</strong> GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash</li>
+        <li><strong>Misc:</strong> Linux, Git, Jira, Confluence, Scrum, Kanban</li>
+        </ul>
+    </article>
 </body>
 
 </html>

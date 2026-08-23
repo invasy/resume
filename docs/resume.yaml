@@ -24,12 +24,7 @@ content:
       - Constantly improving skills with new technologies and instruments.
       - Passionate about efficiency and performance.
       - GNU/Linux and FOSS enthusiast.
-  location:
-    address: null
-    city: null
-    region: null
-    country: null
-    postalCode: null
+  location: {}
   profiles:
   - network: LinkedIn
     username: invasy
@@ -43,7 +38,8 @@ content:
     position: Senior Software Engineer
     startDate: 2023-06-19
     endDate: null
-    summary: ""
+    summary: |
+      - …
     keywords:
     - Python
     - Flask
@@ -53,6 +49,10 @@ content:
     - SQLAlchemy
     - PostgreSQL
     - ClickHouse
+    - VictoriaMetrics
+    - Prometheus
+    - Lua
+    - nginx
     - Kubernetes
   - name: M.Video-Eldorardo
     url: https://www.mvideoeldorado.ru/

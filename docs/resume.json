@@ -6,13 +6,7 @@
     "phone": "",
     "url": "https://vpolyakov.cv",
     "summary": "Software engineer (C++/Qt, Scala, Python) with over 10 years of experience in enterprise services development. Development automation specialist with a vast CI/CD and DevOps expertise. Collaborated with distributed teams in different software development stages. Constantly improving skills with new technologies and instruments. Passionate about efficiency and performance. GNU/Linux and FOSS enthusiast.",
-    "location": {
-      "postalCode": "",
-      "countryCode": "",
-      "region": "",
-      "city": "",
-      "address": ""
-    },
+    "location": {},
     "profiles": [
       {
         "network": "LinkedIn",
@@ -29,8 +23,7 @@
         "username": "invasy",
         "url": "https://leetcode.com/invasy/"
       }
-    ],
-    "image": ""
+    ]
   },
   "work": [
     {
@@ -40,9 +33,16 @@
       "position": "Senior Software Engineer",
       "startDate": "2023-06-19",
       "endDate": "",
-      "description": "",
-      "summary": "**Tech stack**: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes.",
-      "highlights": []
+      "description": "_NGENIX_ is a provider of acceleration and security services for public web resources.",
+      "summary": "**Tech stack**: Python, Flask, FastAPI, OpenAPI, Starlette, SQLAlchemy, Lua, nginx, PostgreSQL, Consul, ClickHouse, VictoriaMetrics, Prometheus, GitLab CI, Kubernetes.",
+      "highlights": [
+        "Developed the central control plane for the edge platform: stateful Python service with unified REST API for managing users, customers, and configurations.",
+        "Designed and delivered OpenAPI-driven REST APIs (Tornado, aiohttp, FastAPI) on PostgreSQL/SQLAlchemy, Redis, Consul, Vault",
+        "Built event-driven audit logging and integration pipelines (AMQP, Celery) meeting regulatory compliance requirements.",
+        "Maintained 140K-line codebase with 4,400+ automated tests (pytest, ruff, GitLab CI) and Prometheus-based monitoring and Sentry error tracking.",
+        "Managed project resourcing and feature delivery: decomposed multi-quarter features into independent tasks, estimated and planned workload, coordinated with frontend, SRE, and platform teams.",
+        "Mentored mid-level developers through code reviews, design reviews, and onboarding."
+      ]
     },
     {
       "name": "M.Video-Eldorardo",
@@ -142,7 +142,9 @@
         "STL",
         "Boost",
         "Qt",
-        "CEF"
+        "CEF",
+        "CMake",
+        "Conan"
       ]
     },
     {
@@ -161,7 +163,8 @@
         "Django",
         "Flask",
         "asyncio",
-        "aiohttp"
+        "aiohttp",
+        "SQLAlchemy"
       ]
     },
     {

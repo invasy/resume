@@ -5,15 +5,11 @@ RUN set -eu;\
     export DEBIAN_FRONTEND='noninteractive';\
     apt-get update; apt-get -y upgrade;\
     apt-get -y install --no-install-recommends\
-        fonts-linuxlibertine\
         git\
         libyaml-0-2\
         make\
         nodejs\
-        npm\
-        texlive-fonts-extra\
-        texlive-lang-english\
-        texlive-xetex;\
+        npm;\
     rm -rf /var/cache/* /var/log/* /var/lib/apt/lists/* /tmp/*
 
 # Install Python packages

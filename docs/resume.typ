@@ -4,9 +4,9 @@
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
   name: "Vasiliy Polyakov",
-  title: "Vasiliy Polyakov - CV",
+  title: "Vasiliy Polyakov Résumé",
   footer: context { [#str(here().page())\/#str(counter(page).final().first())] },
-  top-note: [ #emph[Last updated in Apr 2026] ],
+  top-note: [ #emph[Last updated in Aug 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "a4",
@@ -80,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.3em,
   date: datetime(
     year: 2026,
-    month: 4,
-    day: 21,
+    month: 8,
+    day: 22,
   ),
 )
 
@@ -124,7 +124,19 @@ GNU\/Linux and FOSS enthusiast.
 
   ],
   main-column-second-row: [
-    #summary[#strong[Tech stack]: Python, Flask, FastAPI, OpenAPI, Connexion, SQLAlchemy, PostgreSQL, ClickHouse, Kubernetes.]
+    #summary[#strong[Tech stack]: Python, Flask, FastAPI, OpenAPI, Starlette, SQLAlchemy, Lua, nginx, PostgreSQL, Consul, ClickHouse, VictoriaMetrics, Prometheus, GitLab CI, Kubernetes.]
+
+    - Developed the central control plane for the edge platform: stateful Python service for managing business entities.
+
+    - Designed OpenAPI-driven REST APIs (Tornado, aiohttp, FastAPI) on PostgreSQL\/SQLAlchemy, Redis, Consul, Vault.
+
+    - Built event-driven audit logging and integration pipelines meeting regulatory compliance requirements.
+
+    - Maintained 140K-line codebase with 4,400+ automated tests, Prometheus monitoring, and Sentry error tracking.
+
+    - Managed project feature delivery, estimated and planned workload, coordinated with frontend, SRE, and platform teams.
+
+    - Mentored mid-level developers through code reviews, design reviews, and onboarding.
 
   ],
 )
@@ -255,7 +267,7 @@ GNU\/Linux and FOSS enthusiast.
 
 == Technologies
 
-#strong[C++:] STL, Boost, Qt, CEF
+#strong[C++:] STL, Boost, Qt, CEF, CMake, Conan
 
 #strong[Scala:] Akka, Cats, Lagom
 
@@ -266,20 +278,3 @@ GNU\/Linux and FOSS enthusiast.
 #strong[DevOps:] GitHub Actions, GitLab CI, Jenkins, Ansible, Puppet, Docker, Podman, Kubernetes, GNU Make, Bash
 
 #strong[Misc:] Linux, Git, Jira, Confluence, Scrum, Kanban
-
-== Volunteer
-
-#regular-entry(
-  [
-    #strong[PermLUG]
-
-  ],
-  [
-    Sept 2011 – present
-
-  ],
-  main-column-second-row: [
-    #summary[Community Manager]
-
-  ],
-)

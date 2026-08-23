@@ -1,0 +1,47 @@
+image: node:22
+
+stages:
+- validate
+- build
+- deploy
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+before_script:
+- npm ci
+
+validate:
+  stage: validate
+  script:
+  - make validate
+  - make lint
+
+build:
+  stage: build
+  script:
+  - make render-html
+  - make render-pdf || true
+  artifacts:
+    paths:
+    - public/
+    expire_in: 1 week
+
+# GitLab Pages deployment — the job MUST be named "pages"
+# and output artifacts under public/
+pages:
+  stage: deploy
+  script:
+  - make render-html
+  - make render-pdf || true
+  - cp docs/ public/
+  artifacts:
+    paths:
+    - public/
+  only:
+  - main
+  environment:
+    name: production
+    url: https://$CI_PROJECT_NAMESPACE.gitlab.io/$CI_PROJECT_NAME
